@@ -22,6 +22,10 @@ totalDots = 0;
     for( int i = 0; i < dice.length; i++){
    dice[i].show();
    totalDots += dice[i].getDotCount();
+  for(int x1 = 0; x < dice.length; x++){
+  dice[x1].show();
+   totalDots += dice[x1].getDotCount();
+}
 }
     fill(0);
     textSize(20);
