@@ -1,4 +1,5 @@
 Die[] dice;
+int totalDots = 0;
 void setup()
 {
   size(500, 300);
@@ -16,8 +17,11 @@ background(173,216,230);
   
     for( int i = 0; i < dice.length; i++){
    dice[i].show();
+   totalDots += dice[i].getDotCOunt();
 }
-    
+    fill(0);
+    textSize(20);
+    text( "Total Dots: " + totalDots, width / 2, height - 30);
 }
 void mousePressed()
 {
@@ -36,6 +40,7 @@ class Die //models one single dice cube
   boolean fivedots;
   boolean sixdots;
   int myX, myY;
+  int dotCount;
   Die(int x, int y) //constructor
   {
     //variable initializations here
@@ -54,21 +59,27 @@ class Die //models one single dice cube
   sixedots = false;
     if( Math.random() < .166){
       onedot = true;
+      dotCount = 1;
     }
     else if( Math.random() < 0.333){
       twodots = true;
+      dotCount = 2;
     } 
     else if( Math.random() < 0.5){
      threedots = true;
+     dotCount = 3;
     }
      else if( Math.random() < 0.666) {
      fourdots = true;
+     dotCount = 4;
     }
   else if( Math.random() < 0.83){
   fivedots = true;
+  dotCount = 5;
 }
 else if( Math.random() < 1){
   sixdots = true;
+  dotCount = 6;
 }
     
   }
@@ -112,6 +123,9 @@ else if ( threedots == true){
     ellipse( myX + 10, myY + 25, 10,10);
     ellipse( myX + 40, myY + 25, 10,10);
     }
-
+   
+}
+ int getDotCount(){
+ return dotCount;
 }
 }
