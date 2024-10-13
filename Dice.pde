@@ -9,10 +9,12 @@ void setup()
   textAlign(CENTER, CENTER);
   noLoop();
   dice = new Die[cols * rows];
-for(int i = 0; i < dice.length; i++){
-  int x = 10 + (i % cols) * dieSize;
-  int y = 50 + (i / cols) * dieSize;
- dice[i] = new Die(x,y);
+for(int row = 0; row < rows; row++){
+ for( int col = 0; col < cols; col++){
+ int x = 10 + col * dieSize;
+  int y = 50 + row * dieSize;
+ dice[row * cols + col] = new Die(x,y);
+}
 }
 }
 void draw()
