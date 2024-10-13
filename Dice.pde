@@ -1,7 +1,7 @@
 Die[] dice;
 int totalDots = 0;
-int cols = 4;
-int rows = 2;
+int cols = 8;
+int rows = 3;
 void setup()
 {
   size(500, 300);
