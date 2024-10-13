@@ -6,7 +6,7 @@ void setup()
   textAlign(CENTER, CENTER);
   noLoop();
   dice = new Die[7];
-for( int y = 50; y < 200; y= y + 50;){
+for( int y = 50; y < 200; y = y + 50){
 for(int i = 0; i < dice.length; i++){
  dice[i] = new Die(10+i*60,y);
 }
