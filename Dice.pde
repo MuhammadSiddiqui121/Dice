@@ -11,13 +11,13 @@ for(int i = 0; i < dice.length; i++){
 }
 void draw()
 {
-background(255,255,255)
+background(255);
   //your code here
-  {\
+  
     for( int i = 0; i < dice.length; i++){
    dice[i].show();
 }
-    }
+    
 }
 void mousePressed()
 {
