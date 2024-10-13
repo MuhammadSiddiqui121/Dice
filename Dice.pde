@@ -11,7 +11,7 @@ for(int i = 0; i < dice.length; i++){
 }
 void draw()
 {
-background(255);
+background(173,216,230);
   //your code here
   
     for( int i = 0; i < dice.length; i++){
