@@ -1,21 +1,29 @@
+Die[] dice;
 void setup()
 {
   size(500, 300);
   textAlign(CENTER, CENTER);
   noLoop();
+dice = new Die[7];
+for(int i = 0; i < dice.length; i++){
+ dice[i] = new Die(10+i*60,50);
+}
 }
 void draw()
 {
+background(255,255,255)
   //your code here
   {\
-    for( int x = 10; x < 450; x = x+60){
-    Die bob = new Die(50,50);
-    bob.show();
+    for( int i = 0; i < dice.length; i++){
+   dice[i].show();
 }
     }
 }
 void mousePressed()
 {
+  for(int i = 0; i < dice.length; i++){
+  dice[i].roll();
+}
   redraw();
 }
 class Die //models one single dice cube
