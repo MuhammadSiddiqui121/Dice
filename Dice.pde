@@ -13,7 +13,7 @@ for(int i = 0; i < dice.length; i++){
 void draw()
 {
 background(173,216,230);
-totalDots =0;
+totalDots = 0;
   //your code here
   
     for( int i = 0; i < dice.length; i++){
