@@ -38,18 +38,30 @@ class Die //models one single dice cube
   void roll()
   {
     //your code here
+  onedot= false;
+  twodots = false;
+  threedots = false;
+  fourdots = false;
+  fivedots= false;
+  sixedots = false;
     if( Math.random() < .166){
       onedot = true;
     }
-    else if( Math.random() < 0.333 && Math.random() > 0.166){
+    else if( Math.random() < 0.333){
       twodots = true;
     } 
-    else if( Math.random() < 0.5 && Math.random() > 0.166 && Math.random() > 0.33){
+    else if( Math.random() < 0.5){
      threedots = true;
     }
-     else if( Math.random() < 0.666 && Math.random() > 0.166 && Math.random() > 0.33 && Math.random () > 0.5) {
+     else if( Math.random() < 0.666) {
      fourdots = true;
     }
+  else if( Math.random() < 0.83){
+  fivedots = true;
+}
+else if( Math.random() < 1){
+  sixdots = true;
+}
     
   }
   void show()
