@@ -1,16 +1,17 @@
 Die[] dice;
 int totalDots = 0;
+int cols = 4;
+int rows =2;
 void setup()
 {
   size(500, 300);
   textAlign(CENTER, CENTER);
   noLoop();
-  dice = new Die[8];
+  dice = new Die[cols * rows];
 for(int i = 0; i < dice.length; i++){
- dice[i] = new Die(10+i*60,50);
-}
-for(int x1 = 0; x1 < dice.length; x1++){
-   dice[x1] = new Die( 10+i * 60, 70);
+  int x = 10 + (i % cols) * 60;
+  int y = 50 + (i % cols) * 60;
+ dice[i] = new Die(x,y);
 }
 }
 void draw()
@@ -23,10 +24,6 @@ totalDots = 0;
    dice[i].show();
    totalDots += dice[i].getDotCount();
   }
-  for(int x1 = 0; x < dice.length; x1++){
-  dice[x1].show();
-   totalDots += dice[x1].getDotCount();
-}
     fill(0);
     textSize(20);
     text("Total Dots: " + totalDots, width / 2, height - 30);
