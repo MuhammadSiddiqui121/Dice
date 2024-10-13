@@ -9,7 +9,7 @@ void setup()
 for(int i = 0; i < dice.length; i++){
  dice[i] = new Die(10+i*60,50);
 }
-for(int x1 = 0; x < dice.length; x++){
+for(int x1 = 0; x1 < dice.length; x1++){
    dice[x1] = new Die( 10+i * 60, 70);
 }
 }
