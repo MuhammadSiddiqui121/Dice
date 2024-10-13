@@ -1,7 +1,7 @@
 Die[] dice;
 int totalDots = 0;
 int cols = 4;
-int rows =2;
+int rows = 2;
 void setup()
 {
   size(500, 300);
@@ -10,7 +10,7 @@ void setup()
   dice = new Die[cols * rows];
 for(int i = 0; i < dice.length; i++){
   int x = 10 + (i % cols) * 60;
-  int y = 50 + (i % cols) * 60;
+  int y = 50 + (i / cols) * 60;
  dice[i] = new Die(x,y);
 }
 }
