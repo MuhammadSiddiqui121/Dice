@@ -2,6 +2,7 @@ Die[] dice;
 int totalDots = 0;
 int cols = 8;
 int rows = 3;
+int dieSize = 60;
 void setup()
 {
   size(500, 300);
@@ -9,8 +10,8 @@ void setup()
   noLoop();
   dice = new Die[cols * rows];
 for(int i = 0; i < dice.length; i++){
-  int x = 10 + (i % cols) * 60;
-  int y = 50 + (i / cols) * 60;
+  int x = 10 + (i % cols) * dieSize;
+  int y = 50 + (i / cols) * dieSize;
  dice[i] = new Die(x,y);
 }
 }
