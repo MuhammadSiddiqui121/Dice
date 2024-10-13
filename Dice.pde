@@ -5,7 +5,7 @@ void setup()
   size(500, 300);
   textAlign(CENTER, CENTER);
   noLoop();
-dice = new Die[7];
+  dice = new Die[7];
 for(int i = 0; i < dice.length; i++){
  dice[i] = new Die(10+i*60,50);
 }
@@ -21,7 +21,7 @@ background(173,216,230);
 }
     fill(0);
     textSize(20);
-    text( "Total Dots: " + totalDots, width / 2, height - 30);
+    text("Total Dots: " + totalDots, width / 2, height - 30);
 }
 void mousePressed()
 {
@@ -44,9 +44,10 @@ class Die //models one single dice cube
   Die(int x, int y) //constructor
   {
     //variable initializations here
-    roll();
+   
     myX = x;
     myY = y;
+    roll();
   }
   void roll()
   {
