@@ -5,7 +5,7 @@ int rows = 3;
 int dieSize = 60;
 void setup()
 {
-  size(500, 300);
+  size(600, 300);
   textAlign(CENTER, CENTER);
   noLoop();
   dice = new Die[cols * rows];
