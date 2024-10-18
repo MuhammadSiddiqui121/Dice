@@ -1,6 +1,6 @@
 Die[] dice;
 int totalDots = 0;
-int cols = 8;
+int cols = 9;
 int rows = 3;
 int dieSize = 60;
 void setup()
